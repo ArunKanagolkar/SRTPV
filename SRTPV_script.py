@@ -26,7 +26,7 @@ if st.button('Check power evacuation'):
    st.write('Proposed SRTPV capacity is morethan 150KW, the consumer shall convert existing distribution system into 11KV')
  else:
    st.write('Proposed SRTPV capacity is lessthan 150KW, the consumer shall not convert existing distribution system into 11KV')
-st.write('Get SLDs')
+st.subheader('Get SLDs')
 with open("HT consumer.jpeg", "rb") as file:
   btn = st.download_button(
         label="Download HT SRTPV SLD",
