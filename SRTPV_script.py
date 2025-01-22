@@ -15,8 +15,11 @@ else:
   st.write("Required PPA from DISCOM")
   
 if st.button('Max.allowed SRTPV'):
-  st.write('Govt.allowable Max.Capacity is kWp:')
-  st.write(sl)
+  st.write("Govt.allowable Max.Capacity is kWp:",sl,"kWp")
+ 
+if st.button("How much solar energy is produced each year?"):
+  eg = sl*4*365
+  st.write(eg,"Units")
 if st.button('Max.Space SRTPV'):
   et = area/8
   st.write('Space available for SRTPV installation on roof in kWp:')
