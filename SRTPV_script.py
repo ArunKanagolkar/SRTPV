@@ -53,7 +53,7 @@ with open("procedure.jpeg", "rb") as file:
         mime="procedure/jpeg",
     )
 st.subheader('SRTPV Cost')
-st.write("Estimated cost for",et)
+st.write("Estimated cost for".et)
 if st.button('Cost'):
   cost = et*48000
   st.write(cost)
