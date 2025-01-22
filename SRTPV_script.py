@@ -21,13 +21,12 @@ if st.button('Check power evacuation'):
    st.write('Proposed SRTPV capacity is morethan 150KW, the consumer shall convert existing distribution system into 11KV')
  else:
    st.write('Proposed SRTPV capacity is lessthan 150KW, the consumer shall not convert existing distribution system into 11KV')
-if st.buttom('Get SLD'):
-  if sytm == 'Single Phase':
-    with open("flower.png", "rb") as file:
-    btn = st.download_button(
-        label="Download image",
-        data=SRTPV,
-        file_name="Gross%20metering.jpeg",
-        mime="Gross%20metering/jpeg",
+st.write('Get SLDs')
+with open("HT consumer.jpeg", "rb") as file:
+  btn = st.download_button(
+        label="Download HT SRTPV SLD",
+        data=file,
+        file_name="HT consumer.jpeg",
+        mime="HT consumer/jpeg",
     )
                     
