@@ -61,7 +61,7 @@ with open("procedure.jpeg", "rb") as file:
 st.subheader('SRTPV Cost')
 
 st.write("Estimated cost for")
-st.write(sl)
+st.write(sl,"kWp")
 if st.button('Cost'):
   cost = sl*48000
   st.write(cost)
