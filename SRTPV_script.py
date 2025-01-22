@@ -44,4 +44,11 @@ with open("Gross metering.jpeg", "rb") as file:
         file_name="Gross metering.jpeg",
         mime="Gross metering/jpeg",
     )
-                    
+
+with open("procedure.jpeg", "rb") as file:
+  btn = st.download_button(
+        label="Download SRTPV procedure",
+        data=file,
+        file_name="procedure.jpeg",
+        mime="procedure/jpeg",
+    )
