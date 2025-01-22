@@ -26,8 +26,8 @@ if st.buttom('Get SLD'):
     with open("flower.png", "rb") as file:
     btn = st.download_button(
         label="Download image",
-        data=file,
-        file_name="flower.png",
-        mime="image/png",
+        data=SRTPV,
+        file_name="Gross%20metering.jpeg",
+        mime="Gross%20metering/jpeg",
     )
                     
