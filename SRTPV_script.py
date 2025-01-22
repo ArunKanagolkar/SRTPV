@@ -4,8 +4,9 @@ import streamlit as st
 
 st.title("Estimating SRTPV Capacity")
 st.subheader('Solar rooftop PV module')
-sl = st.slider('Select the consumer sectioned load in KW',)
-area = st.slider('Select the rooftop space available for SRTPV in Sq.mm')
+st.image("srtpv.jpeg", caption="Sunrise for the clean energy")
+sl = st.slider('Select the consumer sectioned load in KW',1,500)
+area = st.slider('Select the rooftop space available for SRTPV in Sq.mm',1,500)
 sytm = st.selectbox('Select type of system',['Single Phase','Three Phase'])
 if st.button('Max.SRTPV Plant Capacity'):
   st.write('Max.Capacity is kWp:')
