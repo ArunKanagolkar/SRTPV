@@ -1,7 +1,5 @@
 import numpy as np
 import pandas as pd
-
-
 import streamlit as st
 
 st.title("Estimating SRTPV Capacity")
@@ -10,7 +8,7 @@ sl = st.slider('Select the consumer sectioned load in KW',)
 area = st.slider('Select the rooftop space available for SRTPV in Sq.mm')
 sytm = st.selectbox('Select type of system',['Single Phase','Three Phase'])
 if st.button('Max.SRTPV Plant Capacity'):
-  st.write('Max.Capacity is:')
+  st.write('Max.Capacity is kWp:')
   st.write(sl)
 if st.button('Estimate SRTPV Capacity'):
   et = area/8
@@ -28,5 +26,21 @@ with open("HT consumer.jpeg", "rb") as file:
         data=file,
         file_name="HT consumer.jpeg",
         mime="HT consumer/jpeg",
+    )
+
+with open("LT consumer.jpeg", "rb") as file:
+  btn = st.download_button(
+        label="Download LT SRTPV SLD",
+        data=file,
+        file_name="LT consumer.jpeg",
+        mime="LT consumer/jpeg",
+    )
+
+with open("Gross metering.jpeg", "rb") as file:
+  btn = st.download_button(
+        label="Download Grossmetering SRTPV SLD",
+        data=file,
+        file_name="Gross metering.jpeg",
+        mime="Gross metering/jpeg",
     )
                     
