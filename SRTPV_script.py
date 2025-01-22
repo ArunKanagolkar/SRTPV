@@ -63,5 +63,5 @@ st.subheader('SRTPV Cost')
 st.write("Estimated cost for")
 st.write(sl)
 if st.button('Cost'):
-  cost = et*48000
+  cost = sl*48000
   st.write(cost)
