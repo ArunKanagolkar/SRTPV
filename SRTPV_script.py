@@ -8,12 +8,18 @@ st.image("srtpv.jpeg", caption="Sunrise for the clean energy")
 sl = st.slider('Select the consumer sectioned load in KW',1,500)
 area = st.slider('Select the rooftop space available for SRTPV in Sq.mtrs',1,500)
 sytm = st.selectbox('Select type of system',['Single Phase','Three Phase'])
-if st.button('Max.SRTPV Plant Capacity'):
-  st.write('Max.Capacity is kWp:')
+ty = st.selectbox('Select type of SRTPV',['Off grid','ON grid'])
+if ty =='Off grid':
+  st.write(" No need PPA from DISCOM")
+else:
+  st.write("Required PPA from DISCOM")
+  
+if st.button('Max.allowed SRTPV'):
+  st.write('Govt.allowable Max.Capacity is kWp:')
   st.write(sl)
-if st.button('Estimate SRTPV Capacity'):
+if st.button('Max.Space SRTPV'):
   et = area/8
-  st.write('Your Estimated SRTPV capacity in kWp:')
+  st.write('Space available for SRTPV installation on roof in kWp:')
   st.write(et)                    
 if st.button('Check power evacuation'):
  if sl > 150:
@@ -53,7 +59,9 @@ with open("procedure.jpeg", "rb") as file:
         mime="procedure/jpeg",
     )
 st.subheader('SRTPV Cost')
-st.write("Estimated cost for".et)
+
+st.write("Estimated cost for")
+st.write(sl)
 if st.button('Cost'):
   cost = et*48000
   st.write(cost)
