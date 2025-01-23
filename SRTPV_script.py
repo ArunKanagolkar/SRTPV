@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 import streamlit as st
-
+df = pd.read_csv('SRTPV_Fees.csv')
 st.title("Estimating SRTPV Capacity")
 st.subheader('Solar rooftop PV module')
 st.image("srtpv.jpeg", caption="Sunrise for the clean energy")
@@ -13,8 +13,7 @@ else:
   st.write('*No subsidy is available*')
 st.write('Application & Facilitation Fees')
 if st.button('Fees'):
-  
-  st.write("Below is a Fees details:",df)
+   st.write("Below is a Fees details:",df)
 sl = st.slider('Select the consumer sectioned load in KW',1,500)
 area = st.slider('Select the rooftop space available for SRTPV in Sq.mtrs',1,500)
 sytm = st.selectbox('Select type of system',['Single Phase','Three Phase'])
