@@ -5,6 +5,12 @@ import streamlit as st
 st.title("Estimating SRTPV Capacity")
 st.subheader('Solar rooftop PV module')
 st.image("srtpv.jpeg", caption="Sunrise for the clean energy")
+st.writer("Allowed area for SRTPV installation")
+all = st.selectbox('Allowed area',['Residential','Non-Residential','Apartments','Carport'])
+if all=='Residential':
+  st.write('Avail for PM Surya Ghar Scheme subsidy for SRTPV installation')
+else:
+  st.write('No subsidy is available')
 sl = st.slider('Select the consumer sectioned load in KW',1,500)
 area = st.slider('Select the rooftop space available for SRTPV in Sq.mtrs',1,500)
 sytm = st.selectbox('Select type of system',['Single Phase','Three Phase'])
