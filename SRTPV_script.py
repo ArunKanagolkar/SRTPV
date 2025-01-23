@@ -13,8 +13,8 @@ else:
   st.write('*No subsidy is available*')
 st.write('Application & Facilitation Fees')
 if st.button('Fees'):
-  df = pd.read_excel('SRTPV_Fees.xl
-  st.write("Below is a Fees details:", srtpv_fees)
+  df = pd.read_excel('SRTPV Fees.xlsx')
+  st.write("Below is a Fees details:",df)
 sl = st.slider('Select the consumer sectioned load in KW',1,500)
 area = st.slider('Select the rooftop space available for SRTPV in Sq.mtrs',1,500)
 sytm = st.selectbox('Select type of system',['Single Phase','Three Phase'])
