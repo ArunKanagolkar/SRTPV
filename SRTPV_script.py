@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 import streamlit as st
+df = pd.read_excel('SRTPV_Fees.xlsx')
 
 st.title("Estimating SRTPV Capacity")
 st.subheader('Solar rooftop PV module')
@@ -13,7 +14,7 @@ else:
   st.write('*No subsidy is available*')
 st.write('Application & Facilitation Fees')
 if st.button('Fees'):
-  df = pd.read_excel('SRTPV_Fees.xlsx')
+  
   st.write("Below is a Fees details:",df)
 sl = st.slider('Select the consumer sectioned load in KW',1,500)
 area = st.slider('Select the rooftop space available for SRTPV in Sq.mtrs',1,500)
