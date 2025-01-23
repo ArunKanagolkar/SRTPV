@@ -2,6 +2,7 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 df = pd.read_excel('SRTPV_Fees.xlsx')
+st.dataframe(df)
 
 st.title("Estimating SRTPV Capacity")
 st.subheader('Solar rooftop PV module')
