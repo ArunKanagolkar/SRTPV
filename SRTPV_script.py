@@ -2,9 +2,6 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 
-df= st.file_uploader('SRTPV_Fees.xlsx')
-st.dataframe(df)
-
 st.title("Estimating SRTPV Capacity")
 st.subheader('Solar rooftop PV module')
 st.image("srtpv.jpeg", caption="Sunrise for the clean energy")
