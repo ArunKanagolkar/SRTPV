@@ -29,7 +29,7 @@ if st.button('Sectioned Capacity'):
 if st.button("How much solar energy is produced each year?"):
   eg = sl*4*365
   st.write(eg,"Units")
-if st.button('Maximun Capacity'):
+if st.button('Maximum Capacity'):
   et = area/8
   st.write('Your roof area can be used to install SRTPVs up to',et,'kWp')
                      
