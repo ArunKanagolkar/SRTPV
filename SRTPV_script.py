@@ -19,19 +19,19 @@ area = st.slider('Select the rooftop space available for SRTPV in Sq.mtrs',1,500
 sytm = st.selectbox('Select type of system',['Single Phase','Three Phase'])
 ty = st.selectbox('Select type of SRTPV',['Off grid','ON grid'])
 if ty =='Off grid':
-  st.write(" No need PPA from DISCOM")
+  st.write(" No need PPA from Resp.DISCOM")
 else:
-  st.write("Required PPA from DISCOM")
+  st.write("Required Net-metering and Gross-metering PPA from Resp.DISCOM")
   
-if st.button('Max.allowed SRTPV'):
-  st.write("Govt.allowable Max.Capacity is kWp:",sl,"kWp")
+if st.button('Sectioned Capacity'):
+  st.write("Govt.allowable SRTPV capacity upto:",sl,"kWp")
  
 if st.button("How much solar energy is produced each year?"):
   eg = sl*4*365
   st.write(eg,"Units")
-if st.button('Max.Space SRTPV'):
+if st.button('Maximun Capacity'):
   et = area/8
-  st.write('Space available for SRTPV installation on roof in kWp:')
+  st.write('Your roofspace available for SRTPV installation upto in kWp:')
   st.write(et)                    
 if st.button('Check power evacuation'):
  if sl > 150:
