@@ -8,6 +8,7 @@ st.image("srtpv.jpeg", caption="Sunrise for the clean energy")
 all = st.selectbox('Allowed area for SRTPV installation',['Residential','Non-Residential','Apartments','Carport','Others'],index=None,
     placeholder="Select Allowed area...")
 if st.write("You selected:",all):
+if st.button('Check Govt.Subsidy'):
     if all=='Residential':
         st.write('*Qualified to receive SRTPV installation subsidies under the PM Surya Ghar Scheme*:sunglasses:')
     else:
