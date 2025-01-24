@@ -35,6 +35,8 @@ if st.button('Maximum Capacity'):
   et = area/8
   st.write('Your roof area can be used to install SRTPVs up to',et,'kWp')
 pc = st.slider('Select Proposed SRTPV Capacity',1,500)
+if pc > sl:
+    st.write('WARNING PROPOSED SRTPV MORETHAN SECTIONED LOAD')
 con = st.selectbox('Choose type of consumer',['LT Consumer','HT Consumer'],index=None,placeholder="Select consumer...")
 st.write("You selected:",con)
 if st.button('Check power evacuation'):
