@@ -34,7 +34,7 @@ if st.button("How much solar energy is produced each year?"):
 if st.button('Maximum Capacity'):
   et = area/8
   st.write('Your roof area can be used to install SRTPVs up to',et,'kWp')
-pc = st.slider('Select Proposed SRTPV Capacity',1,sl)
+pc = st.slider('Select Proposed SRTPV Capacity',1,500)
 con = st.selectbox('Choose type of consumer',['LT Consumer','HT Consumer'],index=None,placeholder="Select consumer...")
 st.write("You selected:",con)
 if st.button('Check power evacuation'):
