@@ -34,12 +34,17 @@ if st.button("How much solar energy is produced each year?"):
 if st.button('Maximum Capacity'):
   et = area/8
   st.write('Your roof area can be used to install SRTPVs up to',et,'kWp')
-                     
+pc = st.slider('Select Proposed SRTPV Capacity',1,sl)
+con = st.selectbox('Choose type of consumer',['LT Consumer','HT Consumer'],index=None,placeholder="Select consumer...")
+st.write("You selected:",con)
 if st.button('Check power evacuation'):
- if sl > 150:
-   st.write('Proposed SRTPV capacity is morethan 150KW, the consumer shall convert existing distribution system into 11KV')
+ if pc > 150:
+   st.write('Proposed SRTPV capacity is morethan 150kWp, the consumer shall be sync SRTPV system to 11kV distribution system only and 
+   line current does not exceed 80% of the rated current capacity of line and 
+   The billing meter shall be BDM HT meter and 
+   solar meter will be 3Ph LT CT(For Net Meter arrangement)')
  else:
-   st.write('Proposed SRTPV capacity is lessthan 150KW, the consumer shall not convert existing distribution system into 11KV')
+   st.write('Proposed SRTPV capacity is lessthan 150kWp, the consumer shall not convert existing distribution system into 11KV')
 st.subheader('Get SLDs')
 with open("HT consumer.jpeg", "rb") as file:
   btn = st.download_button(
