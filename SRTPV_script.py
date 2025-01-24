@@ -13,7 +13,7 @@ if st.button('Check Govt.Subsidy'):
         st.write('*Qualified to receive SRTPV installation subsidies under the PM Surya Ghar Scheme*:sunglasses:')
     else:
         st.write('*No subsidy is available*')
-st.subheader('Application & Facilitation Fees')
+st.write('**Application & Facilitation Fees**')
 if st.button('Fees'):
    st.write("Below is a Fees details:",df)
 sl = st.slider('Select the consumer sectioned load in KW',1,500)
@@ -42,9 +42,9 @@ con = st.selectbox('Choose type of consumer',['LT Consumer','HT Consumer'],index
 st.write("You selected:",con)
 if st.button('Check power evacuation'):
  if pc > 150:
-   st.write("Proposed SRTPV capacity is morethan 150kWp, the consumer shall be sync SRTPV system to 11kV distribution system only and line current does not exceed 80% of the rated current capacity of line and The billing meter shall be BDM HT meter and solar meter will be 3Ph LT CT(For Net Meter arrangement)")
+   st.write("Proposed SRTPV capacity is morethan **150kWp**, the consumer shall be sync SRTPV system to 11kV distribution system only and line current does not exceed :red[80%] of the rated current capacity of line and The billing meter shall be BDM HT meter and solar meter will be 3Ph LT CT(For Net Meter arrangement)")
  else:
-   st.write('Proposed SRTPV capacity is lessthan 150kWp, the consumer shall not convert existing distribution system into 11KV')
+   st.write('Proposed SRTPV capacity is lessthan **150kWp**, the consumer shall not convert existing distribution system into 11KV')
 st.subheader('Get SLDs')
 with open("HT consumer.jpeg", "rb") as file:
   btn = st.download_button(
