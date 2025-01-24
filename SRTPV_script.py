@@ -5,8 +5,9 @@ df = pd.read_csv('SRTPV_Fees.csv')
 st.title("Quik Estimator for SRTPV")
 st.subheader('Solar rooftop PV module')
 st.image("srtpv.jpeg", caption="Sunrise for the clean energy")
-st.write('Allowed area for SRTPV installation')
-all = st.selectbox('Allowed area',['Residential','Non-Residential','Apartments','Carport'])
+all = st.selectbox('Allowed area for SRTPV installation',['Residential','Non-Residential','Apartments','Carport','Others'],index=None,
+    placeholder="Select Allowed area...")
+st.write("You selected:",all)
 if all=='Residential':
   st.write('*Qualified to receive SRTPV installation subsidies under the PM Surya Ghar Scheme*:sunglasses:')
 else:
