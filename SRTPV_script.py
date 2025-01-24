@@ -5,7 +5,7 @@ df = pd.read_csv('SRTPV_Fees.csv')
 st.title("Quik Estimator for SRTPV")
 st.subheader('Solar rooftop PV module')
 st.image("srtpv.jpeg", caption="Sunrise for the clean energy")
-all = st.selectbox('Allowed area for SRTPV installation',['Residential','Non-Residential','Apartments','Carport','Others'],index=None,
+all = st.selectbox('**Allowed area for SRTPV installation**',['Residential','Non-Residential','Apartments','Carport','Others'],index=None,
     placeholder="Select Allowed area...")
 st.write("You selected:",all)
 if st.button('Check Govt.Subsidy'):
@@ -34,7 +34,7 @@ if st.button('Maximum Capacity'):
   st.write('Your roof area can be used to install SRTPVs up to',et,'kWp')
 pc = st.slider('Select Proposed SRTPV Capacity',1,500)
 if pc > sl:
-    st.write('WARNING: *PROPOSED SRTPV MORETHAN SECTIONED LOAD*')
+    st.write(':red[WARNING]',' *:PROPOSED SRTPV MORETHAN SECTIONED LOAD*')
 if st.button("How much solar energy is produced each year?"):
   eg = pc*4*365
   st.write(pc,"kWp",":",eg,"kWhrs")
