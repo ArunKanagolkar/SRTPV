@@ -28,15 +28,16 @@ else:
 if st.button('Sectioned Capacity'):
   st.write("Govt.allowable SRTPV capacity upto:",sl,"kWp")
  
-if st.button("How much solar energy is produced each year?"):
-  eg = sl*4*365
-  st.write(eg,"Units")
+
 if st.button('Maximum Capacity'):
   et = area/8
   st.write('Your roof area can be used to install SRTPVs up to',et,'kWp')
 pc = st.slider('Select Proposed SRTPV Capacity',1,500)
 if pc > sl:
-    st.write('WARNING PROPOSED SRTPV MORETHAN SECTIONED LOAD')
+    st.write('WARNING: *PROPOSED SRTPV MORETHAN SECTIONED LOAD*')
+if st.button("How much solar energy is produced each year?"):
+  eg = pc*4*365
+  st.write(pc,"kWp",":",eg,"kWhrs")
 con = st.selectbox('Choose type of consumer',['LT Consumer','HT Consumer'],index=None,placeholder="Select consumer...")
 st.write("You selected:",con)
 if st.button('Check power evacuation'):
