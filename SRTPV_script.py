@@ -42,9 +42,9 @@ if st.button('PPA Excecution Authority'):
         st.write("EE(Ele), O&M Sub-Division")
 st.write('**Metering arrangement**')
 ma = st.selectbox("Select consumer category",["Domestic","Hospital","Educational","Industrial","Commercial"],index=None,placeholder="Select consumer...")
-GN = {"Domestic","Hospital","Educational"}
+GN = ["Domestic","Hospital","Educational"]
 for i in GN:
-    if i==ma:
+    if i in ma:
         st.write(':orange[Above consumer Eligible for both Gross & Net Metering arrangements]')
     else:
         st.write(':orange[Above consumer Eligible for Net Metering arrangements only]')
