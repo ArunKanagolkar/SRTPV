@@ -48,7 +48,7 @@ for i in GN:
         st.write(':orange[Above consumer Eligible for both Gross & Net Metering arrangements]')
     else:
         st.write(':orange[Above consumer Eligible for Net Metering arrangements only]')
-        return 
+return i
         
 if st.button("How much solar energy is produced each year?"):
   eg = pc*4*365
