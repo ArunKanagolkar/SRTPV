@@ -41,12 +41,12 @@ if st.button('PPA Excecution Authority'):
     else:
         st.write("EE(Ele), O&M Sub-Division")
 st.write('**Metering arrangement**')
-for ma in st.selectbox("Select consumer category",["Domestic","Hospital","Educational","Industrial","Commercial"]):
-    GN = ["Domestic","Hospital","Educational"]
-    if ma ==GN:
-        st.write('Above consumer Eligible for both Gross & Net Metering arrangements')
-    else:
-        st.write('Above consumer Eligible for both Net Metering arrangements')
+ma = st.selectbox("Select consumer category",["Domestic","Hospital","Educational","Industrial","Commercial"]):
+GN = ["Domestic","Hospital","Educational"]
+if ma ==GN:
+     st.write('Above consumer Eligible for both Gross & Net Metering arrangements')
+ else:
+     st.write('Above consumer Eligible for both Net Metering arrangements')
         
 if st.button("How much solar energy is produced each year?"):
   eg = pc*4*365
