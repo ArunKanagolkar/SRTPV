@@ -46,9 +46,8 @@ for ma in st.selectbox("Select consumer category",["Domestic","Hospital","Educat
     if na ==GN:
         st.write('Above consumer Eligible for both Gross & Net Metering arrangements')
     else:
-    st.write('Above consumer Eligible for both Net Metering arrangements')
-    
-    
+        st.write('Above consumer Eligible for both Net Metering arrangements')
+        
 if st.button("How much solar energy is produced each year?"):
   eg = pc*4*365
   st.write(pc,"kWp",":",eg,"kWhrs")
