@@ -62,7 +62,7 @@ if st.button('Check power evacuation'):
    st.write("Proposed SRTPV capacity is morethan **150kWp**, the consumer shall be sync SRTPV system to 11kV distribution system only and line current does not exceed :red[80%] of the rated current capacity of line and The billing meter shall be BDM HT meter and solar meter will be 3Ph LT CT(For Net Meter arrangement)")
  else:
    st.write('Proposed SRTPV capacity is lessthan **150kWp**, the consumer shall not convert existing distribution system into 11KV')
-st.subheader('Get SLDs')
+st.write('**Get SLDs**')
 with open("HT consumer.jpeg", "rb") as file:
   btn = st.download_button(
         label="Download HT SRTPV SLD",
@@ -94,9 +94,9 @@ with open("procedure.jpeg", "rb") as file:
         file_name="procedure.jpeg",
         mime="procedure/jpeg",
     )
-st.subheader('SRTPV Cost')
+st.write('**SRTPV Cost**')
 
 st.write("Estimated cost for",sl,"kWp")
-if st.button('Cost'):
+if st.button('**Cost**'):
   cost = sl*48000
   st.write(cost)
