@@ -35,6 +35,19 @@ if st.button('Maximum Capacity'):
 pc = st.slider('Select Proposed SRTPV Capacity',1,500)
 if pc > sl:
     st.write(':red[WARNING]',' *:PROPOSED SRTPV MORETHAN SECTIONED LOAD*')
+if st.button('PPA Excecution Authority'):
+    if pc < 500:
+        st.write("AEE(Ele), O&M Sub-Division")
+    else:
+        st.write("EE(Ele), O&M Sub-Division")
+st.write('**Metering arrangement**')
+for ma in st.selectbox("Select consumer category",["Domestic","Hospital","Educational","Industrial","Commercial"]):
+   if ma == "Domestic","Hospital","Educational":
+    st.write('Above consumer Eligible for both Gross & Net Metering arrangements')
+else:
+    st.write('Above consumer Eligible for both Net Metering arrangements')
+    
+    
 if st.button("How much solar energy is produced each year?"):
   eg = pc*4*365
   st.write(pc,"kWp",":",eg,"kWhrs")
