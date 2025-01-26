@@ -1,0 +1,1 @@
+This is the SRTPV Quick Estimator App. It provides a basic estimation of the cost and capacity of a solar rooftop photovoltaic plant. Additionally, it offers useful information on government regulations and norms.
