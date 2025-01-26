@@ -2,8 +2,8 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 df = pd.read_csv('SRTPV_Fees.csv')
-st.title("Quik Estimator for SRTPV")
-st.subheader(':green[Solar rooftop PV module]')
+st.title("SRTPV Quick Estimator App")
+st.subheader(':green[This is the SRTPV Quick Estimator App. It provides a basic estimation of the cost and capacity of a solar rooftop photovoltaic plant. Additionally, it offers useful information on government regulations and norms.]')
 st.image("srtpv.jpeg", caption="Sunrise for the clean energy")
 all = st.selectbox('**Allowed area for SRTPV installation**',['Residential','Non-Residential','Apartments','Carport','Others'],index=None,
     placeholder="Select Allowed area...")
